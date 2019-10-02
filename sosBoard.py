@@ -7,6 +7,9 @@ class SosBoard:
   	self.board[row][col] = act
   	self.count += 1
 
+  def get(self, row, col):
+  	return self.board[row][col]
+
   def isComplete(self):
   	return self.count == 64
 
@@ -14,7 +17,7 @@ class SosBoard:
   	return self.board[row][col] != '_'
 
   def printBoard(self):
-  	print("------- SOS board -------")
+  	print("----- SOS board -----")
   	print()
   	for i in range(8):
   		for j in range(8):
